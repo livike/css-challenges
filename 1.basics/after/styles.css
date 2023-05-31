@@ -1,0 +1,79 @@
+
+/* Namespace */
+@namespace svg "http://www.w3.org/2000/svg";
+
+
+/* Type selector */
+h1, h2, h3, h4, h5, h6{
+  color: crimson;
+ }
+ 
+ /* Class selector */
+.small-heading {
+  text-transform: uppercase;
+}
+
+/* ID selector */
+#quote-by-author {
+  background: lightgrey;
+  padding: 10px;
+  line-height: 1.75;
+}
+
+/* Descendant combinator */
+article p {
+  line-height: 2;
+}
+
+/* Child combinator */
+.list > li {
+  color: crimson;
+}
+
+/* Adjacent sibling combinator */
+header + p {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* General sibling combinator */
+header ~ img {
+  border: 4px solid crimson;
+}
+
+/* Pseudo Classes */
+a:link {
+  color: #1D70B8;
+}
+a:visited {
+  color: #4C2C92;
+}
+a:hover {
+  color: #003078;
+}
+a:focus {
+ outline: solid 1px crimson;
+}
+
+/* Pseudo Elements */
+
+header + p::first-letter {
+  color: crimson;
+  font-style: italic;
+}
+
+/* Attribute selector + pseudo element */
+[lang="it"]::before {
+  content: "🇮🇹"
+}
+
+
+/* Universal selector */
+* {
+  font-family: sans-serif;
+}
+
+/* Universal selector and namespace */
+svg|* {
+  fill: #EDEDED;
+}
